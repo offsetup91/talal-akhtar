@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday, Talal! 🎂</title>
+  <meta name="description" content="A playful yet elegant birthday page — music, fireworks, confetti, balloons, and heartfelt wishes for Hira." />
+  <link rel="preload" as="image" href="girl.jpg" />
+  <link rel="preload" as="audio" href="birthday.mp3" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient gradient blobs -->
+  <div class="blob b1" aria-hidden="true"></div>
+  <div class="blob b2" aria-hidden="true"></div>
+  <div class="blob b3" aria-hidden="true"></div>
+
+  <!-- Sparkles layer -->
+  <div id="sparkles" class="sparkles" aria-hidden="true"></div>
+
+  <!-- Fireworks canvas -->
+  <canvas class="fireworks" aria-hidden="true"></canvas>
+
+  <!-- Mute / Unmute -->
+  <button id="btnMute" class="mute" aria-label="Toggle sound" aria-pressed="false">🔊</button>
+
+  <main class="wrap" role="main">
+    <article class="card" aria-live="polite">
+      <!-- Intro -->
+      <header class="intro">
+        <figure class="polaroid">
+          <img src="girl.jpg" alt="Talal smiling on his birthday" class="hero-img" width="640" height="640" />
+        </figure>
+
+        <h1 class="heading">Happy Birthday, Talal! <span aria-hidden="true">🎂</span></h1>
+
+        <div class="controls" role="group" aria-label="Primary control">
+          <button id="btnCelebrate" class="btn">🎉 Celebrate</button>
+        </div>
+      </header>
+
+      <!-- Reveal on click -->
+      <section id="reveal" class="hidden" aria-hidden="true">
+        <div class="divider" aria-hidden="true"></div>
+
+        <h2 class="sr-only">Birthday Message</h2>
+        <div class="msg reveal-block">
+          <h3><strong>Happy Birthday to Someone Truly Special! 🎉❤️</strong></h3>
+          <p>
+            Happy 20th Birthday, Talal! Today marks the beginning of an exciting new chapter in your life, and we couldn't be more thrilled to celebrate you. As you step into your twenties, we wish you endless success, joy, and all the happiness your heart can hold. May every dream you chase become reality, and may this decade bring you incredible opportunities and beautiful memories. You have so much talent and potential, and we know you are destined for great things. We are so blessed to have you in our family and can't wait to see all the amazing places life takes you. We love you more than words can say! ❤️🎉
+          </p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- Music (starts on Celebrate) -->
+  <audio id="bgMusic" src="birthday.mp3" preload="auto" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
